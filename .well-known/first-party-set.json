@@ -1,0 +1,15 @@
+{
+  "primary": "https://digitalaudiencetesta.nl",
+  "associatedSites": ["https://digitalaudiencetestb.nl", "https://digitalaudiencetestc.nl"],
+  "serviceSites": ["https://servicesite1.com"],
+  "rationaleBySite": {
+    "https://digitalaudiencetestb.nl": "An explanation of how you clearly present the affiliation across domains to users and why users would expect your domains to be affiliated",
+    "https://digitalaudiencetestc.nl": "An explanation of how you clearly present the affiliation across domains to users and why users would expect your domains to be affiliated"
+  },
+
+  "ccTLDs": {
+    "https://digitalaudiencetestb.nl": ["https://digitalaudiencetestb.com"],
+    "https://digitalaudiencetestc.nl": ["https://digitalaudiencetestc.com"],
+    "https://digitalaudiencetesta.nl": ["https://digitalaudiencetesta.com"]
+  }
+}
