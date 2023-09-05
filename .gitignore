@@ -53,3 +53,4 @@ TestResults
 
 #binary databases:
 *.bin
+/.vs/slnx.sqlite
