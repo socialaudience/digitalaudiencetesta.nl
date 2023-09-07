@@ -54,3 +54,4 @@ TestResults
 #binary databases:
 *.bin
 /.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
