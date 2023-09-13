@@ -1,15 +1,13 @@
 {
   "primary": "https://www.digitalaudiencetesta.nl",
-  "associatedSites": ["https://www.digitalaudiencetestb.nl", "https://www.digitalaudiencetestc.nl"],
-  "serviceSites": ["https://cookiebaker.test.digitalaudience.link"],
+  "associatedSites": [ "https://www.digitalaudiencetestb.nl"],
+  "serviceSites": [ "https://cookiebaker.test.digitalaudience.link" ],
   "rationaleBySite": {
-    "https://www.digitalaudiencetestb.nl": "An explanation of how you clearly present the affiliation across domains to users and why users would expect your domains to be affiliated",
-    "https://www.digitalaudiencetestc.nl": "An explanation of how you clearly present the affiliation across domains to users and why users would expect your domains to be affiliated"
+    "https://www.digitalaudiencetestb.nl": "An explanation of how you clearly present the affiliation across domains to users and why users would expect your domains to be affiliated"
   },
 
   "ccTLDs": {
-    "https://www.digitalaudiencetestb.nl": ["https://www.digitalaudiencetestb.com"],
-    "https://www.digitalaudiencetestc.nl": ["https://www.digitalaudiencetestc.com"],
-    "https://www.digitalaudiencetesta.nl": ["https://www.digitalaudiencetesta.com"]
+    "https://www.digitalaudiencetestb.nl": [ "https://www.digitalaudiencetestb.com" ],
+    "https://www.digitalaudiencetestc.nl": [ "https://www.digitalaudiencetestc.com" ]
   }
 }
