@@ -20,7 +20,11 @@
         const output = document.getElementById("data");
 
         async function load() {
-            const hasAccess = await document.hasStorageAccess();
+            let hasAccess = await document.hasStorageAccess();
+            if (hasAccess === false) {
+                hasAccess = await document.requestStorageAccess();
+                hasAccess = await document.hasStorageAccess();
+            }
 
             output.textContent = `storageAccess:${hasAccess}`;
         }
