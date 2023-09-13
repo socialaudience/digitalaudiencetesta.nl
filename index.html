@@ -22,11 +22,12 @@
         async function load() {
             let hasAccess = await document.hasStorageAccess();
             if (hasAccess === false) {
+                output.textContent += `storageAccess:${hasAccess}`;
                 hasAccess = await document.requestStorageAccess();
                 hasAccess = await document.hasStorageAccess();
             }
 
-            output.textContent = `storageAccess:${hasAccess}`;
+            output.textContent += `storageAccess:${hasAccess}`;
         }
 
         load();
