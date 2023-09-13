@@ -28,17 +28,17 @@
                 try {
                     hasAccess = await document.requestStorageAccess();
                 } catch {
-                    output += `requestStorageAccess() failed \n`;
+                    output.textContent += `requestStorageAccess() failed \n`;
                 }
                 try {
                     hasAccess = await document.requestStorageAccessFor('https://www.digitalaudiencetesta.nl/');
                 } catch {
-                    output += `requestStorageAccessFor('https://www.digitalaudiencetesta.nl/') failed \n`;
+                    output.textContent += `requestStorageAccessFor('https://www.digitalaudiencetesta.nl/') failed \n`;
                 }
                 try {
                     hasAccess = await document.requestStorageAccessFor('https://www.digitalaudiencetestb.nl/');
                 } catch {
-                    output += `requestStorageAccessFor('https://www.digitalaudiencetestb.nl/') failed \n`;
+                    output.textContent += `requestStorageAccessFor('https://www.digitalaudiencetestb.nl/') failed \n`;
                 }
 
                 hasAccess = await document.hasStorageAccess();
