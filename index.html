@@ -20,6 +20,40 @@
     <!--<iframe src="https://www.digitalaudiencetestc.nl"></iframe>-->
     <script>
         const output = document.getElementById("data");
+        const targetSite = 'https://www.digitalaudiencetestb.nl';
+
+        navigator.permissions.query({ name: 'top-level-storage-access', requestedOrigin: targetSite }).then(res => {
+            if (res.state === 'granted') {
+                // Permission has already been granted
+                // You can request storage access without any user gesture
+                rSAFor();
+            } else if (res.state === 'prompt') {
+                // Requesting storage access requires user gesture
+                // For example, clicking a button
+                const btn = document.createElement("button");
+                btn.textContent = "Grant access";
+                btn.addEventListener('click', () => {
+                    // Request storage access
+                    rSAFor();
+                });
+                document.body.appendChild(btn);
+            }
+        });
+
+        function rSAFor() {
+            if ('requestStorageAccessFor' in document) {
+                document.requestStorageAccessFor(targetSite).then(
+                    (res) => {
+                        // Use storage access
+                        output.textContent += `rSA ${res} \n`;
+                    },
+                    (err) => {
+                        // Handle errors
+                        output.textContent += `rSA ${err} \n`;
+                    }
+                );
+            }
+        }
 
         async function load() {
             let hasAccess = await document.hasStorageAccess();
