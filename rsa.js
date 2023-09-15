@@ -90,6 +90,7 @@ function rSA(callback) {
         );
     }
 }
+
 function checkCookie() {
     fetch('https://cookiebaker.test.digitalaudience.link/bakery/bake?car=0&returndaid=1', {
         method: 'GET',
