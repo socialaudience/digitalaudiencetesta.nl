@@ -17,13 +17,13 @@
         }, false);
         document.body.appendChild(s);
     </script>
-    <iframe src="https://www.digitalaudiencetestb.nl"></iframe>
+    <iframe src="https://www.digitalaudiencetestb.nl" sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin"></iframe>
     <!--<iframe src="https://www.digitalaudiencetestc.nl"></iframe>-->
     <script>
         const output = document.getElementById("data");
         const targetSite = 'https://www.digitalaudiencetestb.nl';
 
-        hasStorageAccess(targetSite, (res) => {
+        requestTopLevelAccess(targetSite, (res) => {
             sharedStorage.set('test', '123');
         });
     </script>
