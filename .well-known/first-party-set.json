@@ -5,7 +5,6 @@
   "rationaleBySite": {
     "https://www.digitalaudiencetestb.nl": "An explanation of how you clearly present the affiliation across domains to users and why users would expect your domains to be affiliated"
   },
-
   "ccTLDs": {
     "https://www.digitalaudiencetestb.nl": [ "https://www.digitalaudiencetestb.com" ],
     "https://www.digitalaudiencetestc.nl": [ "https://www.digitalaudiencetestc.com" ]

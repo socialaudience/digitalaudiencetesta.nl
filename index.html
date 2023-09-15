@@ -1,3 +1,4 @@
+<script src="./rsa.js"></script>
 <style>
     body{
         background-color:pink;
@@ -22,65 +23,8 @@
         const output = document.getElementById("data");
         const targetSite = 'https://www.digitalaudiencetestb.nl';
 
-        navigator.permissions.query({ name: 'top-level-storage-access', requestedOrigin: targetSite }).then(res => {
-            if (res.state === 'granted') {
-                // Permission has already been granted
-                // You can request storage access without any user gesture
-                rSAFor();
-            } else if (res.state === 'prompt') {
-                // Requesting storage access requires user gesture
-                // For example, clicking a button
-                const btn = document.createElement("button");
-                btn.textContent = "Grant access";
-                btn.addEventListener('click', () => {
-                    // Request storage access
-                    rSAFor();
-                });
-                document.body.appendChild(btn);
-            }
+        hasStorageAccess(targetSite, (res) => {
+            sharedStorage.set('test', '123');
         });
-
-        function rSAFor() {
-            if ('requestStorageAccessFor' in document) {
-                document.requestStorageAccessFor(targetSite).then(
-                    (res) => {
-                        // Use storage access
-                        output.textContent += `rSA ${res} \n`;
-                    },
-                    (err) => {
-                        // Handle errors
-                        output.textContent += `rSA ${err} \n`;
-                    }
-                );
-            }
-        }
-
-        async function load() {
-            let hasAccess = await document.hasStorageAccess();
-            if (hasAccess === false) {
-                output.textContent += `storageAccess:${hasAccess} \n`;
-                try {
-                    hasAccess = await document.requestStorageAccess();
-                } catch {
-                    output.textContent += `requestStorageAccess() failed \n`;
-                }
-                try {
-                    hasAccess = await document.requestStorageAccessFor('https://www.digitalaudiencetesta.nl/');
-                } catch {
-                    output.textContent += `requestStorageAccessFor('https://www.digitalaudiencetesta.nl/') failed \n`;
-                }
-                try {
-                    hasAccess = await document.requestStorageAccessFor('https://www.digitalaudiencetestb.nl/');
-                } catch {
-                    output.textContent += `requestStorageAccessFor('https://www.digitalaudiencetestb.nl/') failed \n`;
-                }
-
-                hasAccess = await document.hasStorageAccess();
-            }
-
-            output.textContent += `storageAccess:${hasAccess} \n`;
-        }
-
-        load();
     </script>
 </body>
