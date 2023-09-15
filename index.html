@@ -15,9 +15,9 @@
         const output = document.getElementById("data");
         const targetSite = 'https://www.digitalaudiencetestb.nl';
 
-        requestTopLevelAccess(targetSite, (res) => {
-            output.textContent += res;
-        });
+        //requestTopLevelAccess(targetSite, (res) => {
+        //    output.textContent += res;
+        //});
 
         function bake() {
             let s = document.createElement('script');
@@ -27,5 +27,7 @@
             }, false);
             document.body.appendChild(s);
         }
+
+        bake();
     </script>
 </body>
