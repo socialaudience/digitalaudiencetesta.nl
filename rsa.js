@@ -98,7 +98,6 @@ function checkCookie() {
     })
     .then((response) => response.text())
     .then((text) => {
-        // Do something
         console.log(text);
     });
 }

@@ -13,21 +13,29 @@
     <!--<iframe src="https://www.digitalaudiencetestc.nl"></iframe>-->
     <script>
         const output = document.getElementById("data");
-        const targetSite = 'https://www.digitalaudiencetestb.nl';
 
-        //requestTopLevelAccess(targetSite, (res) => {
-        //    output.textContent += res;
+        //Get a new cookie
+        checkCookie();
+
+
+
+        //hasStorageAccess(null, (res) => {
+        //    output.textContent += `${res}\n`;
+        //    if (res === true) {
+        //        bake();
+        //    }
         //});
+        //function bake() {
+        //    let s = document.createElement('script');
+        //    s.src = "https://cookiebaker.test.digitalaudience.link/bakery/scripts_dev/da_dev.js";
+        //    s.addEventListener("load", (e) => {
+        //        __da.bake({ car: 0, chips: 1 }); s.remove();
+        //    }, false);
+        //    document.body.appendChild(s);
+        //}
 
-        function bake() {
-            let s = document.createElement('script');
-            s.src = "https://cookiebaker.test.digitalaudience.link/bakery/scripts_dev/da_dev.js";
-            s.addEventListener("load", (e) => {
-                __da.bake({ car: 0, chips: 1 }); s.remove();
-            }, false);
-            document.body.appendChild(s);
-        }
+        //bake();
 
-        bake();
+      
     </script>
 </body>
