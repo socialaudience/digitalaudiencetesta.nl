@@ -3,16 +3,22 @@
 <body>
     <h1>digitalaudiencetesta.nl</h1>
     <pre>
-        <code id="data"></code>
+    <code id="data"></code>
     </pre>
-    <button class="button" id="btn" onclick="work()">cookie</button>
+    <button class="button" onclick="request()">request</button>
+    <button class="button" onclick="work()">cookie</button>
     <script>
         const output = document.getElementById("data");
-        
+
         async function work() {
             const da = await __da.get_da({});
             output.textContent = decodeURIComponent(da);
         }
-      
+        async function request() {
+            __da.bake({ car: 0 });
+            await new Promise(resolve => setTimeout(resolve, 100));
+            await work();
+        }
+
     </script>
 </body>

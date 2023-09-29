@@ -4,6 +4,7 @@
   "serviceSites": [ "https://cookiebaker.test.digitalaudience.link" ],
   "rationaleBySite": {
     "https://www.digitalaudiencetestb.nl": "An explanation of how you clearly present the affiliation across domains to users and why users would expect your domains to be affiliated"
+    "https://cookiebaker.test.digitalaudience.link": "Here we drop cookies"
   },
   "ccTLDs": {
     "https://www.digitalaudiencetestb.nl": [ "https://www.digitalaudiencetestb.com" ],
