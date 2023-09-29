@@ -1,27 +1,5 @@
 <script src="https://cookiebaker.test.digitalaudience.link/bakery/scripts_dev/da_dev.js"></script>
-<style>
-    body{
-        background-color:pink;
-    }
-    .button {
-        background-color: deeppink; /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease 0s;
-    }
-        .button:hover {
-            background-color: palevioletred;
-            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-            color: #fff;
-            transform: translateY(-7px);
-        }
-</style>
+<link rel="stylesheet" href="style.css">
 <body>
     <h1>digitalaudiencetesta.nl</h1>
     <pre>
@@ -33,7 +11,7 @@
         
         async function work() {
             const da = await __da.get_da({});
-            output.textContent = da;
+            output.textContent = decodeURIComponent(da);
         }
       
     </script>
